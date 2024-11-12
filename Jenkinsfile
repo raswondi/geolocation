@@ -5,8 +5,22 @@ pipeline {
 }
 stages{
     stage('maven build'){
-        steps{
-            sh 'mvn clean install package -DargLine="--add-opens java.base/java.lang=ALL-UNNAMED"'
+            steps{
+                sh 'mvn clean install package -DargLine="--add-opens java.base/java.lang=ALL-UNNAMED"'
+
+
+            }
+        }
+        stage('check pwd'){
+            steps{
+                sh 'pwd'
+
+
+            }
+        }
+        stage('list directory'){
+            steps{
+                sh 'ls'
 
 
             }
