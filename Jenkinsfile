@@ -6,7 +6,8 @@ pipeline {
 stages{
     stage('maven build'){
         steps{
-            sh 'mvn clean install package --add-opens java.base/java.lang=ALL-UNNAMED'
+            sh 'mvn clean install package -DargLine="--add-opens java.base/java.lang=ALL-UNNAMED"'
+
 
             }
         }
