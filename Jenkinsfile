@@ -20,6 +20,7 @@ stages{
         }
         stage('upload artifact'){
             steps{
+                script{
                 nexusArtifactUploader artifacts: 
                 [[artifactId: '${POM_ARTIFACTID}',
                  classifier: '',
@@ -33,7 +34,7 @@ stages{
                          repository: 'biom',
                           version: '${POM_VERSION}'
 
-
+                }
             }
         }
         stage('check direcotry'){
