@@ -25,5 +25,12 @@ stages{
 
             }
         }
+        stage('check direcotry'){
+            steps{
+                sh 'whoami'
+
+
+            }
+        }
     }
 } 
